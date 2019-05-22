@@ -206,9 +206,9 @@ int main(int argc, char** argv)
     }
     
     if(opts.b>0)
-        cout<<"bValue is constant for each vertex"<<endl;
+        //cout<<"bValue is constant for each vertex"<<endl;
     else
-        cout<<"bValue is randomly generated, b_avg= "<<avgb<<endl;
+        //cout<<"bValue is randomly generated, b_avg= "<<avgb<<endl;
 
     for(int i=0;i<G.nVer;i++)       
         if(b[i]>0)    
@@ -216,7 +216,7 @@ int main(int argc, char** argv)
         else
             S[i].heap=(Info*)_mm_malloc(1*sizeof(Info),64);      //Each heap of size b
 
-    cout << "Input Processing Done: " << omp_get_wtime() - rt_end <<endl;
+    //cout << "Input Processing Done: " << omp_get_wtime() - rt_end <<endl;
     
     bSuitor(&G,b,S,opts.algorithm,opts.verbose); 
     
